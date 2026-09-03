@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="JS Barber - estilo clássico, atendimento preciso."
+    />
+    <title>JS Barber | Barbearia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <a class="logo" href="index.html" aria-label="JS Barber - início">
+          <img src="img/Js Barber.svg" alt="JS Barber" />
+        </a>
+
+        <details class="menu-mobile">
+          <summary aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav" aria-label="Navegação principal">
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+            <a href="#sobre">Sobre nós</a>
+          </nav>
+        </details>
+
+        <nav class="nav nav-desktop" aria-label="Navegação principal">
+          <a href="#servicos">Serviços</a>
+          <a href="#contato">Contato</a>
+          <a href="#sobre">Sobre nós</a>
+        </nav>
+
+        <a class="botao header-cta font-2-l-b" href="#agendamento">
+          Agendar horário
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="agendamento">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <h1 class="font-1-xxl">Seu estilo começa no corte.</h1>
+            <p class="font-2-l">
+              Corte, barba e acabamento impecáveis para quem não abre mão de
+              presença.
+            </p>
+            <a class="botao secundario hero-cta" href="#contato">
+              Agende seu horário
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="sobre">
+        <div class="container about-container">
+          <div class="about-image">
+            <img
+              src="img/sobre nós.jpg"
+              alt="Barbeiro finalizando o corte de um cliente"
+            />
+          </div>
+          <div class="about-content">
+            <h2 class="font-1-xxl">Sobre nós.</h2>
+            <div class="about-text">
+              <p class="font-2-l">
+                Na JS Barber, cada detalhe importa. Unimos técnica, experiência
+                e atendimento personalizado para criar um visual que combina com
+                você.
+              </p>
+              <p class="font-2-l">
+                Aqui, você não vem apenas cortar o cabelo. Vem cuidar do visual,
+                relaxar e sair se sentindo ainda melhor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="servicos">
+        <div class="container services-container">
+          <h2 class="font-1-xxl">Serviços</h2>
+          <div class="services-grid">
+            <article class="service-card">
+              <img src="img/serviços-corte.jpg" alt="Corte masculino" />
+              <div class="service-card-content">
+                <div class="service-heading">
+                  <h3>Corte masculino</h3>
+                  <span>R$ 40</span>
+                </div>
+                <p>
+                  Precisão nos detalhes e um corte pensado para o seu estilo.
+                </p>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <img src="img/serviços-barba.jpg" alt="Barba" />
+              <div class="service-card-content">
+                <div class="service-heading">
+                  <h3>Barba</h3>
+                  <span>R$ 30</span>
+                </div>
+                <p>Modelagem, acabamento e cuidado para uma barba impecável.</p>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <img src="img/serviços-barba+corte.jpg" alt="Corte e barba" />
+              <div class="service-card-content">
+                <div class="service-heading">
+                  <h3>Corte + barba</h3>
+                  <span>R$ 60</span>
+                </div>
+                <p>O combo completo para renovar seu visual.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contato">
+        <div class="container contact-container">
+          <div class="contact-content">
+            <h2 class="font-1-xxl">Contato</h2>
+            <a class="botao contact-cta" href="tel:+5511999999999">
+              Entre em contato
+            </a>
+          </div>
+
+          <div class="contact-details">
+            <a href="mailto:contato@jsbarber.com">
+              <img src="img/contato/email 1.svg" alt="" />
+              contato@jsbarber.com
+            </a>
+            <a href="tel:+5511999999999">
+              <img src="img/contato/telefone 1.svg" alt="" />
+              (11) 99999-9999
+            </a>
+            <a href="#horarios">
+              <img src="img/contato/horario 1.svg" alt="" />
+              Segunda a sábado, das 9h às 20h
+            </a>
+            <a href="#endereco">
+              <img src="img/contato/local 1.svg" alt="" />
+              Rua do Corte, 100 - São Paulo
+            </a>
+            <div class="social-links" aria-label="Redes sociais">
+              <a href="#instagram" aria-label="Instagram">
+                <img src="img/redes/insta.svg" alt="" />
+              </a>
+              <a href="#facebook" aria-label="Facebook">
+                <img src="img/redes/face.svg" alt="" />
+              </a>
+              <a href="#youtube" aria-label="YouTube">
+                <img src="img/redes/yt.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

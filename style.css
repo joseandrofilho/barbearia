@@ -1,0 +1,15 @@
+@import url(./css/componentes.css);
+@import url(./css/tipografia.css);
+@import url(./css/cores.css);
+
+@import url(./css/global/header.css);
+@import url(./css/global/hero.css);
+@import url(./css/global/about.css);
+@import url(./css/global/services.css);
+@import url(./css/global/contact.css);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
