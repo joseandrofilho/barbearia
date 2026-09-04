@@ -28,6 +28,7 @@
 }
 
 .contact-details > a,
+.contact-details > div:not(.social-links),
 .social-links a {
   display: inline-flex;
   align-items: center;
@@ -39,6 +40,10 @@
 }
 
 .contact-details > a {
+  gap: 14px;
+}
+
+.contact-details > div:not(.social-links) {
   gap: 14px;
 }
 

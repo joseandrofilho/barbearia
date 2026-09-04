@@ -26,6 +26,10 @@
     transform 180ms ease;
 }
 
+.botao:active {
+  transform: translateY(0);
+}
+
 .botao:hover,
 .botao:focus-visible {
   transform: translateY(-1px);
@@ -37,7 +41,7 @@
 }
 
 .botao.secundario {
-  background: linear-gradient(#dddd, #cccc);
+  background: linear-gradient(var(--cor-3), var(--cor-4));
   color: var(--cor-12);
 }
 

@@ -13,3 +13,21 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background: var(--cor-11);
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cor-p1);
+  outline-offset: 4px;
+}

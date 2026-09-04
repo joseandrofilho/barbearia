@@ -1,4 +1,4 @@
-# Projeto de landing page para app fitness
+# Projeto de landing page para barbearia
 
 fonte Playfair Display como a principal e roboto como secundaria
 Objetivo é ter uma landing page clean , e sotisficada

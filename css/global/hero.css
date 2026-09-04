@@ -21,19 +21,19 @@
   justify-items: start;
   max-width: 540px;
   gap: 0;
-  padding: 120px 0;
+  padding: clamp(80px, 14vh, 140px) 0;
 }
 
 .hero h1 {
   max-width: 500px;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
   color: var(--cor-0);
   animation: hero-title-entry 800ms ease-out both;
 }
 
 .hero p {
   max-width: 470px;
-  margin-bottom: 200px;
+  margin-bottom: 48px;
   color: var(--cor-2);
 }
 
@@ -71,7 +71,7 @@
 
   .hero-content {
     max-width: 390px;
-    padding: 120px 0;
+    padding: 88px 0;
   }
 
   .hero p {
