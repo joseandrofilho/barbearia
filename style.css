@@ -4,8 +4,10 @@
 
 @import url(./css/global/header.css);
 @import url(./css/global/hero.css);
+@import url(./css/global/highlights.css);
 @import url(./css/global/about.css);
 @import url(./css/global/services.css);
+@import url(./css/global/booking.css);
 @import url(./css/global/contact.css);
 
 * {

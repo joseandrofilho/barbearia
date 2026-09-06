@@ -23,6 +23,7 @@
             <span></span><span></span><span></span>
           </summary>
           <nav class="nav" aria-label="Navegação principal">
+            <a href="#agendamento">Agendar</a>
             <a href="#servicos">Serviços</a>
             <a href="#contato">Contato</a>
             <a href="#sobre">Sobre nós</a>
@@ -30,6 +31,7 @@
         </details>
 
         <nav class="nav nav-desktop" aria-label="Navegação principal">
+          <a href="#agendamento">Agendar</a>
           <a href="#servicos">Serviços</a>
           <a href="#contato">Contato</a>
           <a href="#sobre">Sobre nós</a>
@@ -42,17 +44,38 @@
     </header>
 
     <main>
-      <section class="hero" id="agendamento">
+      <section class="hero" id="inicio">
         <div class="container hero-container">
           <div class="hero-content">
+            <p class="hero-eyebrow">Barbearia contemporânea</p>
             <h1 class="font-1-xxl">Seu estilo começa no corte.</h1>
             <p class="font-2-l">
               Corte, barba e acabamento impecáveis para quem não abre mão de
               presença.
             </p>
-            <a class="botao secundario hero-cta" href="#contato">
-              Agende seu horário
-            </a>
+            <div class="hero-actions">
+              <a class="botao secundario hero-cta" href="#agendamento">
+                Agende seu horário
+              </a>
+              <a class="hero-link" href="#servicos">Conheça os serviços</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="highlights" aria-label="Diferenciais da JS Barber">
+        <div class="container highlights-grid">
+          <div class="highlight-item">
+            <strong>01</strong>
+            <span>Atendimento personalizado</span>
+          </div>
+          <div class="highlight-item">
+            <strong>02</strong>
+            <span>Técnica e precisão</span>
+          </div>
+          <div class="highlight-item">
+            <strong>03</strong>
+            <span>Ambiente para relaxar</span>
           </div>
         </div>
       </section>
@@ -68,6 +91,7 @@
             />
           </div>
           <div class="about-content">
+            <p class="eyebrow">A experiência JS Barber</p>
             <h2 class="font-1-xxl">Sobre nós.</h2>
             <div class="about-text">
               <p class="font-2-l">
@@ -86,7 +110,13 @@
 
       <section class="services" id="servicos">
         <div class="container services-container">
-          <h2 class="font-1-xxl">Serviços</h2>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Cuidado nos detalhes</p>
+              <h2 class="font-1-xxl">Serviços</h2>
+            </div>
+            <p>Seu visual, pensado para você.</p>
+          </div>
           <div class="services-grid">
             <article class="service-card">
               <img
@@ -141,11 +171,162 @@
         </div>
       </section>
 
+      <section class="booking" id="agendamento">
+        <div class="container booking-container">
+          <div class="booking-intro">
+            <p class="eyebrow">Seu próximo visual</p>
+            <h2 class="font-1-xxl">Agende seu horário.</h2>
+            <p>
+              Escolha o serviço, o melhor dia e horário. Enviaremos sua
+              solicitação direto para o WhatsApp da JS Barber.
+            </p>
+          </div>
+
+          <form class="booking-form" id="booking-form">
+            <div class="booking-field">
+              <label for="service">Serviço</label>
+              <select id="service" name="service" required>
+                <option value="">Selecione um serviço</option>
+                <option value="Corte masculino - R$ 40">
+                  Corte masculino - R$ 40
+                </option>
+                <option value="Barba - R$ 30">Barba - R$ 30</option>
+                <option value="Corte + barba - R$ 60">
+                  Corte + barba - R$ 60
+                </option>
+              </select>
+            </div>
+
+            <div class="booking-row">
+              <div class="booking-field">
+                <label for="date">Data</label>
+                <input id="date" name="date" type="date" required />
+              </div>
+              <fieldset class="booking-field time-field">
+                <legend>Horário</legend>
+                <div
+                  class="time-slots"
+                  id="time-slots"
+                  aria-label="Horários disponíveis"
+                >
+                  <button
+                    type="button"
+                    class="time-slot available"
+                    data-time="09:00"
+                  >
+                    09:00
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot available"
+                    data-time="10:00"
+                  >
+                    10:00
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot booked"
+                    disabled
+                    aria-label="10:30, já agendado"
+                  >
+                    10:30
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot available"
+                    data-time="11:00"
+                  >
+                    11:00
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot booked"
+                    disabled
+                    aria-label="13:00, já agendado"
+                  >
+                    13:00
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot available"
+                    data-time="14:00"
+                  >
+                    14:00
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot available"
+                    data-time="15:00"
+                  >
+                    15:00
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot booked"
+                    disabled
+                    aria-label="16:00, já agendado"
+                  >
+                    16:00
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot available"
+                    data-time="17:00"
+                  >
+                    17:00
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot available"
+                    data-time="18:00"
+                  >
+                    18:00
+                  </button>
+                  <button
+                    type="button"
+                    class="time-slot available"
+                    data-time="19:00"
+                  >
+                    19:00
+                  </button>
+                </div>
+                <input id="time" name="time" type="hidden" />
+                <p class="time-legend">
+                  <span
+                    ><i class="legend-dot available-dot"></i>Disponível</span
+                  >
+                  <span><i class="legend-dot booked-dot"></i>Já agendado</span>
+                </p>
+              </fieldset>
+            </div>
+
+            <div class="booking-field">
+              <label for="name">Seu nome</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Como podemos chamar você?"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <button class="botao booking-submit" type="submit">
+              Continuar pelo WhatsApp
+            </button>
+            <p class="booking-note" id="booking-note" aria-live="polite">
+              O horário será confirmado pela equipe no WhatsApp.
+            </p>
+          </form>
+        </div>
+      </section>
+
       <section class="contact" id="contato">
         <div class="container contact-container">
           <div class="contact-content">
             <h2 class="font-1-xxl">Contato</h2>
-            <a class="botao contact-cta" href="tel:+5511999999999">
+            <a class="botao contact-cta" href="#agendamento">
               Entre em contato
             </a>
           </div>
@@ -155,9 +336,9 @@
               <img src="img/contato/email 1.svg" alt="" />
               contato@jsbarber.com
             </a>
-            <a href="tel:+5511999999999">
+            <a href="tel:+5583993489774">
               <img src="img/contato/telefone 1.svg" alt="" />
-              (11) 99999-9999
+              (83) 99348-9774
             </a>
             <div>
               <img src="img/contato/horario 1.svg" alt="" />
@@ -191,5 +372,6 @@
         </div>
       </section>
     </main>
+    <script src="script.js" defer></script>
   </body>
 </html>
