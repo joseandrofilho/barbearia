@@ -210,3 +210,28 @@
     margin-bottom: 20px;
   }
 }
+
+@media (max-width: 560px) {
+  .booking-form {
+    padding: 20px 16px;
+  }
+
+  .time-slots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .booking-field input,
+  .booking-field select {
+    min-height: 46px;
+    font-size: 0.95rem;
+  }
+
+  .time-slot {
+    min-height: 40px;
+    font-size: 0.8125rem;
+  }
+
+  .time-legend {
+    gap: 12px;
+  }
+}

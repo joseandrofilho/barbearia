@@ -139,3 +139,39 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 560px) {
+  .services {
+    padding: 72px 0;
+  }
+
+  .section-heading {
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+
+  .section-heading > p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .service-card-content {
+    padding: 20px 18px;
+  }
+
+  .service-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .service-heading h3 {
+    font-size: 1.125rem;
+    padding-left: 30px;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}

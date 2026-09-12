@@ -120,3 +120,41 @@
     gap: 16px;
   }
 }
+
+@media (max-width: 560px) {
+  .hero-content {
+    max-width: 100%;
+    padding: 72px 0 80px;
+  }
+
+  .hero h1 {
+    max-width: 260px;
+    margin-bottom: 20px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 16px;
+  }
+
+  .hero p {
+    max-width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-cta,
+  .hero-link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-link {
+    display: inline-flex;
+    width: auto;
+    justify-content: flex-start;
+  }
+}

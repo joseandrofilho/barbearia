@@ -79,3 +79,25 @@
     margin-bottom: 40px;
   }
 }
+
+@media (max-width: 560px) {
+  .about-container {
+    gap: 32px;
+  }
+
+  .about-content {
+    padding: 72px 20px 80px;
+  }
+
+  .about-content h2 {
+    margin-bottom: 28px;
+  }
+
+  .about-text p {
+    font-size: 1.125rem;
+  }
+
+  .about-text p:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
