@@ -18,6 +18,16 @@
   --cor-p3: #704e1f;
   --cor-p4: #5b3f18;
   --cor-p5: #402b0d;
+
+  --ouro-claro: #e9c58b;
+  --ouro: #d8a053;
+  --ouro-escuro: #a87836;
+  --ouro-gradiente: linear-gradient(135deg, #ecc98e 0%, #d8a053 45%, #a87836 100%);
+  --linha: rgb(255 255 255 / 8%);
+  --linha-ouro: rgb(216 160 83 / 22%);
+  --fundo: #0c0b0a;
+  --fundo-2: #131110;
+  --fundo-3: #1b1815;
 }
 
 .cor-0 {

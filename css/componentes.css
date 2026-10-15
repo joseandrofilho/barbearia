@@ -1,76 +1,162 @@
 .container {
-  max-width: 1200px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 1240px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
 }
 
+/* Botão */
 .botao {
-  display: inline-block;
-  padding: 16px 32px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  background: linear-gradient(#d8a053, #c7924a);
-  color: var(--cor-12);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  font:
-    600 1.125rem/1.35 "Playfair Display ",
-    sans-serif;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   max-width: max-content;
+  padding: 18px 34px;
+  overflow: hidden;
+  isolation: isolate;
   border: none;
+  border-radius: 2px;
+  background: var(--ouro-gradiente);
+  box-shadow: 0 14px 34px -14px rgb(216 160 83 / 60%);
+  color: var(--cor-12);
+  font:
+    700 0.8125rem/1.2 "Roboto",
+    sans-serif;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
   cursor: pointer;
   transition:
-    background 180ms ease,
-    transform 180ms ease;
+    transform 300ms var(--ease),
+    box-shadow 300ms var(--ease);
+}
+
+.botao::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgb(255 255 255 / 45%) 50%,
+    transparent 70%
+  );
+  content: "";
+  transform: translateX(-120%);
+  transition: transform 700ms var(--ease);
+}
+
+.botao:hover,
+.botao:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -14px rgb(216 160 83 / 75%);
+}
+
+.botao:hover::before,
+.botao:focus-visible::before {
+  transform: translateX(120%);
 }
 
 .botao:active {
   transform: translateY(0);
 }
 
-.botao:hover,
-.botao:focus-visible {
-  transform: translateY(-1px);
-}
-
-.botao:not(.secundario):hover,
-.botao:not(.secundario):focus-visible {
-  background: linear-gradient(var(--cor-p2), var(--cor-p3));
-}
-
 .botao.secundario {
-  background: linear-gradient(var(--cor-3), var(--cor-4));
-  color: var(--cor-12);
+  border: 1px solid var(--linha-ouro);
+  background: transparent;
+  box-shadow: none;
+  color: var(--ouro-claro);
 }
 
 .botao.secundario:hover,
 .botao.secundario:focus-visible {
-  background: linear-gradient(var(--cor-5), var(--cor-6));
+  border-color: var(--ouro);
+  background: rgb(216 160 83 / 8%);
+}
+
+/* Eyebrow */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  color: var(--ouro);
+  font:
+    500 0.75rem/1.2 "Roboto",
+    sans-serif;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  width: 36px;
+  height: 1px;
+  background: var(--ouro);
+  content: "";
+}
+
+/* Títulos de seção */
+.titulo {
+  color: var(--cor-0);
+  font:
+    500 clamp(2.5rem, 5vw, 4.25rem) / 1.05 "Playfair Display",
+    serif;
+  letter-spacing: -0.02em;
+}
+
+.titulo em,
+.hero h1 em {
+  background: var(--ouro-gradiente);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-style: italic;
+}
+
+/* Link com seta */
+.link-seta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  color: var(--cor-1);
+  font:
+    500 0.8125rem/1.2 "Roboto",
+    sans-serif;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 250ms ease;
+}
+
+.link-seta span {
+  color: var(--ouro);
+  transition: transform 300ms var(--ease);
+}
+
+.link-seta:hover,
+.link-seta:focus-visible {
+  color: var(--ouro-claro);
+}
+
+.link-seta:hover span,
+.link-seta:focus-visible span {
+  transform: translateX(6px);
 }
 
 @media (max-width: 800px) {
-  .titulo-bg {
-    padding-bottom: 40px;
-    padding-top: 40px;
-  }
-  .titulo p {
-    font-size: 1rem;
-    text-transform: lowercase;
-    font-weight: 400;
+  .botao {
+    padding: 16px 26px;
   }
 }
 
-@media (max-width: 1200px) {
-  .botao {
-    padding: 12px 16px;
-  }
-}
-
-@media (max-width: 800px) {
-  .botao {
-    padding: 12px 16px;
-    font-size: 16px;
+@media (max-width: 560px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

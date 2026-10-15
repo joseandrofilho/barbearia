@@ -1,103 +1,143 @@
 .about {
-  padding: 0;
-  background: var(--cor-11);
+  padding: 160px 0;
+  background: var(--fundo);
   color: var(--cor-0);
 }
 
 .about-container {
   display: grid;
-  grid-template-columns: minmax(0, 728px) minmax(0, 1fr);
-  max-width: none;
-  gap: 0;
-  padding: 0;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(56px, 9vw, 128px);
+  align-items: center;
 }
 
 .about-image {
-  width: 100%;
-  min-height: 680px;
-  overflow: hidden;
+  position: relative;
+  margin: 0 28px 28px 0;
+}
+
+/* Moldura dourada deslocada */
+.about-image::before {
+  position: absolute;
+  inset: 28px -28px -28px 28px;
+  z-index: 0;
+  border: 1px solid var(--linha-ouro);
+  content: "";
 }
 
 .about-image img {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  filter: saturate(0.9) contrast(1.05);
 }
 
-.about-content {
-  padding: 120px clamp(24px, 7vw, 120px);
+.about-badge {
+  position: absolute;
+  right: -28px;
+  bottom: 56px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 26px;
+  border: 1px solid var(--linha-ouro);
+  background: rgb(12 11 10 / 88%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
-.about-content h2 {
-  margin-bottom: 56px;
-  color: var(--cor-0);
+.about-badge strong {
+  color: var(--ouro);
+  font:
+    italic 600 2rem/1 "Playfair Display",
+    serif;
+}
+
+.about-badge span {
+  color: var(--cor-4);
+  font:
+    500 0.6875rem/1.4 "Roboto",
+    sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.about-content .titulo {
+  margin-bottom: 40px;
 }
 
 .about-text {
   display: grid;
   max-width: 500px;
-  gap: 0;
+  gap: 24px;
 }
 
 .about-text p {
-  font:
-    400 1.5rem/1.5 "Roboto",
-    sans-serif;
   color: var(--cor-5);
+  font:
+    300 1.125rem/1.75 "Roboto",
+    sans-serif;
 }
 
-.about-text p:not(:last-child) {
-  margin-bottom: 60px;
+.about-quote {
+  max-width: 460px;
+  margin-top: 48px;
+  padding-left: 24px;
+  border-left: 1px solid var(--ouro);
+  color: var(--cor-1);
+  font:
+    italic 500 1.5rem/1.45 "Playfair Display",
+    serif;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .about {
-    padding: 0;
+    padding: 100px 0;
   }
 
   .about-container {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 72px;
   }
 
   .about-image {
-    min-height: 0;
-  }
-
-  .about-image img {
-    height: auto;
-    object-fit: initial;
-  }
-
-  .about-content {
-    padding: 120px 20px;
-  }
-
-  .about-content h2 {
-    margin-bottom: 40px;
+    max-width: 520px;
   }
 }
 
 @media (max-width: 560px) {
-  .about-container {
-    gap: 32px;
+  .about {
+    padding: 80px 0;
   }
 
-  .about-content {
-    padding: 72px 20px 80px;
+  .about-image {
+    margin: 0 16px 16px 0;
   }
 
-  .about-content h2 {
-    margin-bottom: 28px;
+  .about-image::before {
+    inset: 16px -16px -16px 16px;
+  }
+
+  .about-badge {
+    right: -16px;
+    bottom: 32px;
+    padding: 14px 18px;
+  }
+
+  .about-badge strong {
+    font-size: 1.5rem;
   }
 
   .about-text p {
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
   }
 
-  .about-text p:not(:last-child) {
-    margin-bottom: 24px;
+  .about-quote {
+    margin-top: 36px;
+    font-size: 1.25rem;
   }
 }

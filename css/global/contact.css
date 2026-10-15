@@ -1,132 +1,201 @@
 .contact {
-  min-height: 545px;
-  padding: 120px 0;
-  background: #000;
+  position: relative;
+  padding: 160px 0;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse 60% 70% at 0% 50%,
+      rgb(112 78 31 / 20%),
+      transparent 70%
+    ),
+    #000;
   color: var(--cor-0);
 }
 
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(56px, 8vw, 120px);
   align-items: center;
 }
 
-.contact-content h2 {
-  margin-bottom: 48px;
+.contact-content .titulo {
+  margin-bottom: 28px;
+  font-size: clamp(3rem, 8vw, 6.5rem);
 }
 
-.contact-cta {
-  text-decoration: none;
+.contact-text {
+  max-width: 420px;
+  margin-bottom: 44px;
+  color: var(--cor-5);
+  font:
+    300 1.0625rem/1.7 "Roboto",
+    sans-serif;
 }
 
 .contact-details {
   display: grid;
-  gap: 20px;
-  justify-self: end;
-  min-width: min(100%, 360px);
+  border-top: 1px solid var(--linha);
 }
 
-.contact-details > a,
-.contact-details > div:not(.social-links),
-.social-links a {
-  display: inline-flex;
+.contact-details > li:not(.social-links) {
+  display: flex;
   align-items: center;
-  color: var(--cor-2);
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--linha);
+}
+
+.contact-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--linha-ouro);
+  border-radius: 50%;
+}
+
+.contact-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-details small {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--cor-7);
   font:
-    400 1rem/1.5 "Roboto",
+    500 0.6875rem/1.2 "Roboto",
+    sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.contact-details li a,
+.contact-details li span {
+  color: var(--cor-1);
+  font:
+    400 1.0625rem/1.4 "Roboto",
     sans-serif;
   text-decoration: none;
+  transition: color 250ms ease;
 }
 
-.contact-details > a {
-  gap: 14px;
-}
-
-.contact-details > div:not(.social-links) {
-  gap: 14px;
-}
-
-.contact-details > a img {
-  width: 24px;
-  height: 24px;
-}
-
-.contact-details > a:hover,
-.contact-details > a:focus-visible {
-  color: var(--cor-p1);
+.contact-details li a:hover,
+.contact-details li a:focus-visible {
+  color: var(--ouro-claro);
 }
 
 .social-links {
   display: flex;
-  gap: 18px;
-  margin-top: 16px;
+  gap: 12px;
+  padding-top: 28px;
 }
 
 .social-links a {
-  justify-content: center;
-  width: 32px;
-  height: 32px;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--linha);
+  border-radius: 50%;
+  transition:
+    border-color 300ms ease,
+    background 300ms ease,
+    transform 300ms var(--ease);
 }
 
 .social-links img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .social-links a:hover,
 .social-links a:focus-visible {
-  transform: translateY(-2px);
+  border-color: var(--ouro);
+  background: rgb(216 160 83 / 10%);
+  transform: translateY(-3px);
 }
 
-@media (max-width: 800px) {
+/* Rodapé */
+.footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--linha);
+  background: #000;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer img {
+  width: 96px;
+  opacity: 0.8;
+}
+
+.footer p,
+.footer a {
+  color: var(--cor-7);
+  font:
+    400 0.8125rem/1.4 "Roboto",
+    sans-serif;
+  text-decoration: none;
+}
+
+.footer a {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 250ms ease;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  color: var(--ouro);
+}
+
+@media (max-width: 900px) {
   .contact {
-    min-height: 545px;
-    padding: 80px 0;
+    padding: 100px 0;
   }
 
   .contact-container {
     grid-template-columns: 1fr;
     gap: 64px;
   }
-
-  .contact-details {
-    justify-self: start;
-    min-width: 0;
-  }
 }
 
 @media (max-width: 560px) {
   .contact {
-    padding: 72px 0;
+    padding: 80px 0;
   }
 
-  .contact-container {
-    gap: 40px;
-  }
-
-  .contact-content h2 {
-    margin-bottom: 28px;
-  }
-
-  .contact-cta {
+  .contact-content .botao {
     width: 100%;
+    max-width: none;
+  }
+
+  .contact-details > li:not(.social-links) {
+    gap: 16px;
+    padding: 18px 0;
+  }
+
+  .contact-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .contact-details li a,
+  .contact-details li span {
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-container {
+    flex-direction: column;
     text-align: center;
-  }
-
-  .contact-details {
-    width: 100%;
-  }
-
-  .contact-details > a,
-  .contact-details > div:not(.social-links) {
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    gap: 12px;
-    align-items: start;
-  }
-
-  .social-links {
-    justify-content: flex-start;
   }
 }
