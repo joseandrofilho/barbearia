@@ -7,7 +7,7 @@ const timeInput = document.querySelector("#time");
 const timeSlots = document.querySelectorAll(".time-slot.available");
 const bookingNote = document.querySelector("#booking-note");
 
-const whatsappNumber = "5583993489774";
+const whatsappNumber = "558391667053";
 
 // Header translúcido e botão flutuante ao rolar
 function updateOnScroll() {
